@@ -9,11 +9,11 @@
 extern int cursor_x, cursor_y,col;
 extern WINDOW *file_win, *info_win, *comm_win;
 extern std::string filename;
+std::vector<std::string> tdata;
 
 void freshdata(std::vector<std::string> data);
 void insert_mode(){
     int ch;
-    std::vector<std::string> tdata;
     getyx(file_win, cursor_y, cursor_x);
     ch = getch();
     scrollok(file_win, true);//滚动窗口

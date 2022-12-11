@@ -7,7 +7,8 @@
 #include <string>
 #include <vector>
 
-extern int cursor_x, cursor_y,col,filel;
+extern int cursor_x, cursor_y,col;
+extern const int filel;
 extern WINDOW *file_win, *info_win, *comm_win;
 extern std::string filename;
 extern std::vector<std::string> tdata;

@@ -7,17 +7,17 @@
 #include <unistd.h>
 #include "minivim.h"
 
-const int filel=10;
+extern const int filel=10;
 
 int cursor_x, cursor_y;
 WINDOW *file_win, *info_win, *comm_win;
 std::string filename;
+int line,col;
 
 int main(int argc, char *argv[]) {
     initscr();
     raw();
     keypad(stdscr, true);
-    int line,col;
     getmaxyx(stdscr,line,col);
     file_win=newwin(filel,col,0,0);
     info_win=newwin(1,col,filel,0);
